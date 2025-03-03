@@ -16,7 +16,21 @@ def stack():
 
 s1=stack()
 print(s1)
+# here implemented queue
+queue=[]
+n=int(input("enter how many elements in queue"))
 
+def Queue():
+    if len(queue)==n:
+        print("queue is full")
+    else:
+        for i in range(n):
+            element=int(input("enter element"))
+            queue.insert(0,element)
+        return queue
+
+q1=Queue()
+print(q1)
 
 
 
