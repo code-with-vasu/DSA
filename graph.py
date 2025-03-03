@@ -1,4 +1,4 @@
- # by using adjacentary matrix
+ # by using adjacentary matrix did some opeartions like add node and edge and thene delete node and edge 
 nodes=[]
 graph=[]
 node_count=0
