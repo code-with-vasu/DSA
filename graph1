@@ -1,0 +1,54 @@
+# graph implementation by using adjacentary list
+#
+graph={}
+def add_node(n):
+    if n in graph:
+        print("already present")
+    else:
+        graph[n]=[]
+def add_edge(v1,v2,cost):
+    if v1 not in graph:
+        print("not in graph")
+    elif v2 not in graph:
+        print("not in graph")
+    else:
+        # graph[v1].append(v2)
+        # graph[v2].append(v1)
+        # perform with weighted graph
+        l1=[v2,cost]
+        l2=[v1,cost]
+        graph[v1].append(l1)
+        graph[v2].append(l2)
+
+# deleteing node and edge
+
+def delete_node(n):
+    if n not in graph:
+        print("not present")
+    else:
+        graph.pop(n)
+        for i in graph:
+            list1=graph[i]
+            if n in list1:
+                list1.remove(n)
+
+def delete_edge(v1,v2):
+    if v1 not in graph:
+        print("not present")
+    elif v2 not in graph:
+        print("not present")
+    else:
+        if v1 in graph[v2]:
+            graph[v1].remove(v2)
+            graph[v2].remove(v1)
+
+
+add_node('A')
+add_node('B')
+add_node('C')
+add_edge('A','B',20)
+add_edge('A','C',30)
+print(graph)
+print("after deleting node")
+delete_edge('A','C')
+print(graph)
