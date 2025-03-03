@@ -9,9 +9,9 @@ def stack():
     if length(stack1)==n:
         print("stack is full")
     else:
-        for i in range(n):
-            element = int(input("enter ur element"))
-            stack1.append(element)
+        # for i in range(n):
+        element = int(input("enter ur element"))
+        stack1.append(element)
     return stack1
 
 s1=stack()
